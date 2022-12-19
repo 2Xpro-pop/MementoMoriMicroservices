@@ -5,7 +5,7 @@ ID                int             NOT NULL       PRIMARY KEY IDENTITY,
 Name              nvarchar(50)    NOT NULL,
 Address           nvarchar(50)    NOT NULL,
 Budget            float           NOT NULL
-)
+);
 
 CREATE TABLE memento_mori.dbo.Users (       
 ID                int             NOT NULL       PRIMARY KEY IDENTITY,
@@ -20,14 +20,14 @@ ID                int             NOT NULL       PRIMARY KEY IDENTITY,
 Name              nvarchar(50)    NOT NULL,
 Amount            int             NOT NULL,
 BranchOfficeID    int             NOT NULL       FOREIGN KEY REFERENCES BranchOffices(ID)
-)
+);
 
 CREATE TABLE memento_mori.dbo.BudgetHistory (       
 ID                int             NOT NULL       PRIMARY KEY IDENTITY,
 Action            nvarchar(50)    NOT NULL,
 Description       nvarchar(350)   NOT NULL,
 BranchOfficeID    int             NOT NULL       FOREIGN KEY REFERENCES BranchOffices(ID)
-)
+);
 
 CREATE TABLE memento_mori.dbo.Personal( 
 ID                int             NOT NULL       PRIMARY KEY IDENTITY, 
@@ -50,7 +50,7 @@ Surname           nvarchar(100)   NOT NULL,
 PhoneNumber       nvarchar(50)    NOT NULL, 
 Address           nvarchar(50)    NOT NULL, 
 Email             nvarchar(50)    NOT NULL, 
-)
+);
 
 CREATE TABLE memento_mori.dbo.Schedule(
 ID                int             NOT NULL       PRIMARY KEY IDENTITY,
@@ -58,4 +58,4 @@ PatientID         int             NOT NULL       FOREIGN KEY REFERENCES Patients
 PostID            int             NOT NULL       FOREIGN KEY REFERENCES Personal(ID),
 Date              date            NOT NULL,
 Price             float           NOT NULL
-)
+);
