@@ -10,5 +10,3 @@ services:
       ACCEPT_EULA : "Y"
     volumes:
       - ./data:/var/opt/mssql/data
-      - ./log:/var/opt/mssql/log
-      - ./secrets:/var/opt/mssql/secrets
