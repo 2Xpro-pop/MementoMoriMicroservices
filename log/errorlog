@@ -1,0 +1,61 @@
+2022-12-19 09:18:21.84 Server      Microsoft SQL Server 2019 (RTM-CU18) (KB5017593) - 15.0.4261.1 (X64) 
+	Sep 12 2022 15:07:06 
+	Copyright (C) 2019 Microsoft Corporation
+	Developer Edition (64-bit) on Linux (Ubuntu 20.04.5 LTS) <X64>
+2022-12-19 09:18:21.84 Server      UTC adjustment: 0:00
+2022-12-19 09:18:21.84 Server      (c) Microsoft Corporation.
+2022-12-19 09:18:21.85 Server      All rights reserved.
+2022-12-19 09:18:21.85 Server      Server process ID is 392.
+2022-12-19 09:18:21.85 Server      Logging SQL Server messages in file '/var/opt/mssql/log/errorlog'.
+2022-12-19 09:18:21.85 Server      Registry startup parameters: 
+	 -d /var/opt/mssql/data/master.mdf
+	 -l /var/opt/mssql/data/mastlog.ldf
+	 -e /var/opt/mssql/log/errorlog
+2022-12-19 09:18:21.86 Server      SQL Server detected 1 sockets with 6 cores per socket and 12 logical processors per socket, 12 total logical processors; using 12 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
+2022-12-19 09:18:21.86 Server      SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
+2022-12-19 09:18:21.86 Server      Detected 6260 MB of RAM. This is an informational message; no user action is required.
+2022-12-19 09:18:21.86 Server      Using conventional memory in the memory manager.
+2022-12-19 09:18:21.86 Server      Page exclusion bitmap is enabled.
+2022-12-19 09:18:21.92 Server      Buffer pool extension is not supported on Linux platform.
+2022-12-19 09:18:21.92 Server      Buffer Pool: Allocating 1048576 bytes for 919846 hashPages.
+2022-12-19 09:18:22.00 Server      Buffer pool extension is already disabled. No action is necessary.
+2022-12-19 09:18:22.19 Server      Successfully initialized the TLS configuration. Allowed TLS protocol versions are ['1.0 1.1 1.2']. Allowed TLS ciphers are ['ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA'].
+2022-12-19 09:18:22.21 Server      Query Store settings initialized with enabled = 1, 
+2022-12-19 09:18:22.22 Server      The maximum number of dedicated administrator connections for this instance is '1'
+2022-12-19 09:18:22.23 Server      Node configuration: node 0: CPU mask: 0x0000000000000fff:0 Active CPU mask: 0x0000000000000fff:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
+2022-12-19 09:18:22.25 Server      Using dynamic lock allocation.  Initial allocation of 2500 Lock blocks and 5000 Lock Owner blocks per node.  This is an informational message only.  No user action is required.
+2022-12-19 09:18:22.26 Server      In-Memory OLTP initialized on lowend machine.
+2022-12-19 09:18:22.31 Server      [INFO] Created Extended Events session 'hkenginexesession'
+2022-12-19 09:18:22.31 Server      Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+2022-12-19 09:18:22.32 Server      Total Log Writer threads: 2. This is an informational message; no user action is required.
+2022-12-19 09:18:22.32 Server      clwb is selected for pmem flush operation.
+2022-12-19 09:18:22.32 Server      Software Usage Metrics is disabled.
+2022-12-19 09:18:22.33 spid9s      [1]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1.
+2022-12-19 09:18:22.33 spid9s      Starting up database 'master'.
+2022-12-19 09:18:22.39 Server      CLR version v4.0.30319 loaded.
+2022-12-19 09:18:22.60 spid9s      The tail of the log for database master is being rewritten to match the new sector size of 4096 bytes.  1536 bytes at offset 412160 in file /var/opt/mssql/data/mastlog.ldf will be written.
+2022-12-19 09:18:22.63 Server      Common language runtime (CLR) functionality initialized.
+2022-12-19 09:18:22.65 spid9s      Converting database 'master' from version 897 to the current version 904.
+2022-12-19 09:18:22.65 spid9s      Database 'master' running the upgrade step from version 897 to version 898.
+2022-12-19 09:18:22.66 spid9s      Database 'master' running the upgrade step from version 898 to version 899.
+2022-12-19 09:18:22.68 spid9s      Database 'master' running the upgrade step from version 899 to version 900.
+2022-12-19 09:18:22.83 spid9s      Database 'master' running the upgrade step from version 900 to version 901.
+2022-12-19 09:18:22.83 spid9s      Database 'master' running the upgrade step from version 901 to version 902.
+2022-12-19 09:18:22.84 spid9s      Database 'master' running the upgrade step from version 902 to version 903.
+2022-12-19 09:18:22.85 spid9s      Database 'master' running the upgrade step from version 903 to version 904.
+2022-12-19 09:18:23.12 spid9s      Resource governor reconfiguration succeeded.
+2022-12-19 09:18:23.13 spid9s      SQL Server Audit is starting the audits. This is an informational message. No user action is required.
+2022-12-19 09:18:23.13 spid9s      SQL Server Audit has started the audits. This is an informational message. No user action is required.
+2022-12-19 09:18:23.20 spid9s      SQL Trace ID 1 was started by login "sa".
+2022-12-19 09:18:23.21 spid9s      Server name is '3d67e6b33b57'. This is an informational message only. No user action is required.
+2022-12-19 09:18:23.21 spid25s     Password policy update was successful.
+2022-12-19 09:18:23.22 spid27s     Always On: The availability replica manager is starting. This is an informational message only. No user action is required.
+2022-12-19 09:18:23.23 spid18s     ERROR: Unable to set system administrator password: Password validation failed. The password does not meet SQL Server password policy requirements because it is not complex enough. The password must be at least 8 characters long and contain characters from three of the following four sets: Uppercase letters, Lowercase letters, Base 10 digits, and Symbols..
+2022-12-19 09:18:23.23 spid27s     Always On: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required.
+2022-12-19 09:18:23.23 spid9s      [4]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1.
+2022-12-19 09:18:23.23 spid12s     [32767]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1.
+2022-12-19 09:18:23.23 spid18s     An error occurred during server setup. See previous errors for more information.
+2022-12-19 09:18:23.24 spid9s      Starting up database 'msdb'.
+2022-12-19 09:18:23.24 spid12s     Starting up database 'mssqlsystemresource'.
+2022-12-19 09:18:23.24 spid18s     SQL Trace was stopped due to server shutdown. Trace ID = '1'. This is an informational message only; no user action is required.
+2022-12-19 09:18:23.25 spid12s     The resource database build version is 15.00.4261. This is an informational message only. No user action is required.

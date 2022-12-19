@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  mssql-server:
+    container_name: mssql
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - "1433:1433"
+    environment:
+      MSSQL_SA_PASSWORD : "abcdefg12345"
+      ACCEPT_EULA : "Y"
+    volumes:
+      - ./data:/var/opt/mssql/data
+      - ./log:/var/opt/mssql/log
+      - ./secrets:/var/opt/mssql/secrets
