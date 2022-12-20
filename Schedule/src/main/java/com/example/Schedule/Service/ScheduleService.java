@@ -12,15 +12,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 @Service
 public class ScheduleService {
-    static final String serverName = "WINDOWS-CQ7O1HH";
+    static final String serverName = "10.5.0.5";
     static final String dbName = "memento_mori";
-    static final String url = "jdbc:sqlserver://" +serverName + ";database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
+    static final String url = "jdbc:sqlserver://" +serverName + ":1433;database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
+    public final String user = "SA";
+    public final String password = "Abcdefg-12345";
 
     @Autowired
     RestTemplateBuilder restTemplateBuilder;
 
     public Iterable<Schedule> showAll() throws SQLException {
-        Connection connection = DriverManager.getConnection(url, "erki","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
         String sql = """ 
                 SELECT * FROM dbo.Schedule
                 """;
@@ -37,7 +39,7 @@ public class ScheduleService {
 
     public void insertData(Schedule schedule) throws ClassNotFoundException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "erki","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
         String sql = """ 
                 INSERT INTO dbo.Schedule VALUES (?,?,?,?)
                 """;
@@ -55,7 +57,7 @@ public class ScheduleService {
 
     public void deleteById(int id) throws SQLException, ClassNotFoundException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "erki","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
         String sql = """ 
                 DELETE FROM dbo.Schedule WHERE id=?;
                 """;
@@ -70,7 +72,7 @@ public class ScheduleService {
 
     public Schedule selectById(int id) throws ClassNotFoundException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "erki","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
 
         String sql = """ 
                 SELECT * FROM dbo.Schedule WHERE id=?
@@ -89,7 +91,7 @@ public class ScheduleService {
 
     public void updateById(Schedule schedule) throws ClassNotFoundException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "erki","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
 
         String sql = """ 
                 UPDATE dbo.Schedule SET name=? , surname=?, phoneNumber=?, address=?, email=?
