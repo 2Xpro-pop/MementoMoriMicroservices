@@ -13,9 +13,11 @@ import java.util.ArrayList;
 @Service
 public class BranchOfficesService {
     static final int budgetPort = 8000;
-    static final String serverName = "DESKTOP-1G0TK5F";
+    static final String serverName = "localhost";
     static final String dbName = "memento_mori";
-    static final String url = "jdbc:sqlserver://" +serverName + ";database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
+    static final String url = "jdbc:sqlserver://" +serverName + ":178;database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
+    public final String user = "SA";
+    public final String password = "Abcdefg-12345";
 
     @Autowired
     RestTemplateBuilder restTemplateBuilder;
@@ -24,7 +26,7 @@ public class BranchOfficesService {
 
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
-        Connection connection = DriverManager.getConnection(url, "nazima","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
 
         String sql = """ 
                 UPDATE dbo.BranchOffices SET name=? , address=?, budget=? WHERE id=?
@@ -41,7 +43,7 @@ public class BranchOfficesService {
     }
 
     public Iterable<BranchOffices> showAll() throws SQLException {
-        Connection connection = DriverManager.getConnection(url, "nazima","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
 
         String sql = """ 
                 SELECT * FROM dbo.BranchOffices
@@ -61,7 +63,7 @@ public class BranchOfficesService {
 
     public void deleteById(int id) throws SQLException, ClassNotFoundException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "nazima","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
         String sql = """ 
                 DELETE FROM dbo.BranchOffices WHERE id=?;
                 """;
@@ -75,7 +77,7 @@ public class BranchOfficesService {
 
     public void insertData(BranchOffices branchOffices) throws ClassNotFoundException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "nazima","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
 
         String sql = """ 
                 INSERT INTO dbo.BranchOffices VALUES (?,?,?)
@@ -92,7 +94,7 @@ public class BranchOfficesService {
 
     public void changeTo(int id,double budget,String description) throws SQLException, ClassNotFoundException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "nazima","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
 
         String sql = """ 
                 UPDATE dbo.BranchOffices SET budget=budget+? WHERE id=?
@@ -109,7 +111,7 @@ public class BranchOfficesService {
                 .queryParam("moneyAmount", budget)
                 .queryParam("description", description)
                 .queryParam("BranchOfficeId",id);
-        var query = urlBuilder.build().toUri().toString();
+        var query = urlBuilder.build().toUriString();
 
         rest.getForObject(query, String.class);
     }
@@ -119,7 +121,7 @@ public class BranchOfficesService {
 
     public BranchOffices selectById(int id) throws ClassNotFoundException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "nazima","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
 
         String sql = """ 
                 SELECT * FROM dbo.BranchOffices WHERE id=?

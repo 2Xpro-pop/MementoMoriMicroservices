@@ -11,11 +11,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 @Service
 public class BudgetService {
-    static final String serverName = "DESKTOP-1G0TK5F";
+    static final String serverName = "localhost";
     static final String dbName = "memento_mori";
-    static final String url = "jdbc:sqlserver://" +serverName + ";database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
-    public final String user = "nazima";
-    public final String password = "abcdefg";
+    static final String url = "jdbc:sqlserver://" +serverName + ":178;database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
+    public final String user = "SA";
+    public final String password = "Abcdefg-12345";
 
 
     @Autowired

@@ -1,4 +1,4 @@
-# Commands for mssql
+### Commands for mssql
 
 ```bash
 docker exec -it mssql "bash" 
@@ -9,3 +9,7 @@ docker exec -it mssql "bash"
 ```bash
 SELECT TABLE_NAME FROM memento_mori.INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'
 ```
+
+### SSMS
+
+Server:localhost,178
