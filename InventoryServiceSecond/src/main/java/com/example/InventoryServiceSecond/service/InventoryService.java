@@ -16,11 +16,11 @@ import java.util.HashMap;
 @Service
 public class InventoryService {
     static final int BranchPort = 3512;
-    static final String serverName = "WINDOWS-CQ7O1HH";
+    static final String serverName = "10.5.0.5";
     static final String dbName = "memento_mori";
-    static final String url = "jdbc:sqlserver://" + serverName + ";database=" + dbName + ";encrypt=true;trustServerCertificate=true;";
-    public final String user = "erki";
-    public final String password = "abcdefg";
+    static final String url = "jdbc:sqlserver://" +serverName + ":1433;database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
+    public final String user = "SA";
+    public final String password = "Abcdefg-12345";
 
     @Autowired
     RestTemplateBuilder restTemplateBuilder;
@@ -90,11 +90,11 @@ public class InventoryService {
 
 
         var rest = restTemplateBuilder.build();
-        var urlBuilder = UriComponentsBuilder.fromHttpUrl("http://localhost:"+BranchPort+"/office/change-to")
+        var urlBuilder = UriComponentsBuilder.fromHttpUrl("http://10.5.0.7:"+BranchPort+"/office/change-to")
                 .queryParam("id", inventory.getBranchOfficeId())
                 .queryParam("budget", -price*inventory.getAmount())
                 .queryParam("description", "Bought "+ inventory.getName());
-        var query = urlBuilder.build().toUri().toString();
+        var query = urlBuilder.build().toUriString();
 
         rest.getForObject(query, String.class);
 

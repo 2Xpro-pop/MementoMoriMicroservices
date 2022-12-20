@@ -45,3 +45,11 @@ services:
     networks:
       gl:
         ipv4_address: 10.5.0.8
+  micro-inventory:
+    container_name: inventory
+    build: ./InventoryServiceSecond
+    ports:
+      - "8009:8009"
+    networks:
+      gl:
+        ipv4_address: 10.5.0.9
