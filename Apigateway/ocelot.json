@@ -1,0 +1,375 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/auth/login/{login}/{password}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.6",
+          "Port": 1939
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/login/{login}/{password}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/office/showAll",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.7",
+          "Port": 3512
+        }
+      ],
+      "UpstreamPathTemplate": "/office/showAll",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/office/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.7",
+          "Port": 3512
+        }
+      ],
+      "UpstreamPathTemplate": "/office/update",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/office/delete",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.7",
+          "Port": 3512
+        }
+      ],
+      "UpstreamPathTemplate": "/office/delete",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/office/add",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.7",
+          "Port": 3512
+        }
+      ],
+      "UpstreamPathTemplate": "/office/add",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/office/change-to",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.7",
+          "Port": 3512
+        }
+      ],
+      "UpstreamPathTemplate": "/office/change-to",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/office/show",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.7",
+          "Port": 3512
+        }
+      ],
+      "UpstreamPathTemplate": "/office/show",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/budget/show",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.8",
+          "Port": 8000
+        }
+      ],
+      "UpstreamPathTemplate": "/budget/show",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/budget/showAll",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.8",
+          "Port": 8000
+        }
+      ],
+      "UpstreamPathTemplate": "/budget/showAll",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/budget/income",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.8",
+          "Port": 8000
+        }
+      ],
+      "UpstreamPathTemplate": "/budget/income",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/budget/delete",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.8",
+          "Port": 8000
+        }
+      ],
+      "UpstreamPathTemplate": "/budget/delete",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/inventory/show",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.9",
+          "Port": 8009
+        }
+      ],
+      "UpstreamPathTemplate": "/show",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/inventory/showAll",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.9",
+          "Port": 8009
+        }
+      ],
+      "UpstreamPathTemplate": "/showAll",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/inventory/buy",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.9",
+          "Port": 8009
+        }
+      ],
+      "UpstreamPathTemplate": "/buy",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/inventory/decrease",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.9",
+          "Port": 8009
+        }
+      ],
+      "UpstreamPathTemplate": "/decrease",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/personal/showAll",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.10",
+          "Port": 8765
+        }
+      ],
+      "UpstreamPathTemplate": "/personal/showAll",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/personal/add",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.10",
+          "Port": 8765
+        }
+      ],
+      "UpstreamPathTemplate": "/personal/add",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/personal/delete",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.10",
+          "Port": 8765
+        }
+      ],
+      "UpstreamPathTemplate": "/personal/delete",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/personal/show-one",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.10",
+          "Port": 8765
+        }
+      ],
+      "UpstreamPathTemplate": "/personal/show-one",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/personal/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.10",
+          "Port": 8765
+        }
+      ],
+      "UpstreamPathTemplate": "/personal/update",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/personal/pay-salary",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.10",
+          "Port": 8765
+        }
+      ],
+      "UpstreamPathTemplate": "/personal/pay-salary",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/patients/showAll",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.11",
+          "Port": 8008
+        }
+      ],
+      "UpstreamPathTemplate": "/patients/showAll",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/patients/add",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.11",
+          "Port": 8008
+        }
+      ],
+      "UpstreamPathTemplate": "/patients/add",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/patients/delete",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.11",
+          "Port": 8008
+        }
+      ],
+      "UpstreamPathTemplate": "/patients/delete",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/patients/show-one",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.11",
+          "Port": 8008
+        }
+      ],
+      "UpstreamPathTemplate": "/patients/show-one",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/patients/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.11",
+          "Port": 8008
+        }
+      ],
+      "UpstreamPathTemplate": "/patients/update",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/schedule/showAll",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.12",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/schedule/showAll",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/schedule/add",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.12",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/schedule/add",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/schedule/delete",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.12",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/schedule/delete",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/schedule/change",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.12",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/schedule/change",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ]
+}
