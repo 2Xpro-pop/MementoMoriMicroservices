@@ -1,13 +1,32 @@
 version: '3.7'
+
+networks:
+  gl: 
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1
 services:
   mssql-server:
     container_name: mssql
     image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
-      - "178:1433"
+      - "1433:1433"
     environment:
       MSSQL_SA_PASSWORD : "Abcdefg-12345"
       ACCEPT_EULA : "Y"
     volumes:
       - ./data:/var/opt/mssql/data
-    
+    networks:
+      gl:
+        ipv4_address: 10.5.0.5
+  micro-auth:
+    container_name: micro-auth
+    build: ./Auth
+    ports:
+      - "1939:1939"
+    depends_on:
+      - mssql-server
+    networks:
+      - gl

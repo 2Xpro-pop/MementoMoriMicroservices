@@ -14,8 +14,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 public class UserRepositoryTest {
-    @Autowired
-    private UserRepository userRepository;
 
     // @Test
     // public void create() throws Exception {

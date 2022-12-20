@@ -14,12 +14,12 @@ import lombok.*;
 @Table(name = "Users")
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String login;
     private String password;
     @Enumerated(EnumType.STRING)
     private Role role;
+    @Column(name = "BranchOfficeID")
     private int branchOfficeId;
-
 }
