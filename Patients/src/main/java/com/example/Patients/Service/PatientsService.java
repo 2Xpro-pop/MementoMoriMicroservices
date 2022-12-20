@@ -12,15 +12,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 @Service
 public class PatientsService {
-    static final String serverName = "WINDOWS-CQ7O1HH";
+    static final String serverName = "10.5.0.5";
     static final String dbName = "memento_mori";
-    static final String url = "jdbc:sqlserver://" +serverName + ";database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
+    static final String url = "jdbc:sqlserver://" +serverName + ":1433;database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
+    public final String user = "SA";
+    public final String password = "Abcdefg-12345";
 
     @Autowired
     RestTemplateBuilder restTemplateBuilder;
 
     public Iterable<Patients> showAll() throws SQLException {
-        Connection connection = DriverManager.getConnection(url, "erki","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
         String sql = """ 
                 SELECT * FROM dbo.Patients
                 """;
@@ -37,7 +39,7 @@ public class PatientsService {
 
     public void insertData(Patients patients) throws ClassNotFoundException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "erki","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
         String sql = """ 
                 INSERT INTO dbo.Patients VALUES (?,?,?,?,?)
                 """;
@@ -55,7 +57,7 @@ public class PatientsService {
 
     public void deleteById(int id) throws SQLException, ClassNotFoundException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "erki","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
         String sql = """ 
                 DELETE FROM dbo.Patients WHERE id=?;
                 """;
@@ -70,7 +72,7 @@ public class PatientsService {
 
     public Patients selectById(int id) throws ClassNotFoundException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "erki","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
 
         String sql = """ 
                 SELECT * FROM dbo.Patients WHERE id=?
@@ -89,7 +91,7 @@ public class PatientsService {
 
     public void updateById(Patients patients) throws ClassNotFoundException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection connection = DriverManager.getConnection(url, "erki","abcdefg");
+        Connection connection = DriverManager.getConnection(url, user,password);
 
         String sql = """ 
                 UPDATE dbo.Patients SET name=? , surname=?, phoneNumber=?, address=?, email=?

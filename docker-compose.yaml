@@ -67,3 +67,12 @@ services:
     networks:
       gl:
         ipv4_address: 10.5.0.10
+
+  micro-patients:
+    container_name: patients
+    build: ./Patients
+    ports:
+      - "8008:8008"
+    networks:
+      gl:
+        ipv4_address: 10.5.0.11
