@@ -8,6 +8,7 @@ networks:
         - subnet: 10.5.0.0/16
           gateway: 10.5.0.1
 services:
+
   mssql-server:
     container_name: mssql
     image: mcr.microsoft.com/mssql/server:2019-latest
@@ -21,6 +22,7 @@ services:
     networks:
       gl:
         ipv4_address: 10.5.0.5
+
   micro-auth:
     container_name: micro-auth
     build: ./Auth
@@ -29,6 +31,7 @@ services:
     networks:
       gl:
         ipv4_address: 10.5.0.6
+
   micro-branch-offices:
     container_name: branch-offices
     build: ./BranchOffices/BranchOffices
@@ -37,6 +40,7 @@ services:
     networks:
       gl:
         ipv4_address: 10.5.0.7
+
   micro-budget-history:
     container_name: budget-history
     build: ./BudgetHistory
@@ -45,6 +49,7 @@ services:
     networks:
       gl:
         ipv4_address: 10.5.0.8
+
   micro-inventory:
     container_name: inventory
     build: ./InventoryServiceSecond
@@ -53,3 +58,12 @@ services:
     networks:
       gl:
         ipv4_address: 10.5.0.9
+
+  micro-personal:
+    container_name: personal
+    build: ./Personal
+    ports:
+      - "8765:8765"
+    networks:
+      gl:
+        ipv4_address: 10.5.0.10
