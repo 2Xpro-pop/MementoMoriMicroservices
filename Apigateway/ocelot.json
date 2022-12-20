@@ -139,7 +139,7 @@
 
 
     {
-      "DownstreamPathTemplate": "/inventory/show",
+      "DownstreamPathTemplate": "/show",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -147,11 +147,11 @@
           "Port": 8009
         }
       ],
-      "UpstreamPathTemplate": "/show",
+      "UpstreamPathTemplate": "/inventory/show",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/inventory/showAll",
+      "DownstreamPathTemplate": "/showAll",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -159,11 +159,11 @@
           "Port": 8009
         }
       ],
-      "UpstreamPathTemplate": "/showAll",
+      "UpstreamPathTemplate": "/inventory/showAll",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/inventory/buy",
+      "DownstreamPathTemplate": "/buy",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -171,11 +171,11 @@
           "Port": 8009
         }
       ],
-      "UpstreamPathTemplate": "/buy",
+      "UpstreamPathTemplate": "/inventory/buy",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/inventory/decrease",
+      "DownstreamPathTemplate": "/decrease",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -183,9 +183,10 @@
           "Port": 8009
         }
       ],
-      "UpstreamPathTemplate": "/decrease",
+      "UpstreamPathTemplate": "/inventory/decrease",
       "UpstreamHttpMethod": [ "Get" ]
     },
+
 
     {
       "DownstreamPathTemplate": "/personal/showAll",
