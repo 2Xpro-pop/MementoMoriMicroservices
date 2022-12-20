@@ -11,9 +11,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 @Service
 public class BudgetService {
-    static final String serverName = "localhost";
+    static final String serverName = "10.5.0.5";
     static final String dbName = "memento_mori";
-    static final String url = "jdbc:sqlserver://" +serverName + ":178;database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
+    static final String url = "jdbc:sqlserver://" +serverName + ":1433;database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
     public final String user = "SA";
     public final String password = "Abcdefg-12345";
 

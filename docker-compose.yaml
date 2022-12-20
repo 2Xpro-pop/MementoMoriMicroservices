@@ -26,7 +26,22 @@ services:
     build: ./Auth
     ports:
       - "1939:1939"
-    depends_on:
-      - mssql-server
     networks:
-      - gl
+      gl:
+        ipv4_address: 10.5.0.6
+  micro-branch-offices:
+    container_name: branch-offices
+    build: ./BranchOffices/BranchOffices
+    ports:
+      - "3512:3512"
+    networks:
+      gl:
+        ipv4_address: 10.5.0.7
+  micro-budget-history:
+    container_name: budget-history
+    build: ./BudgetHistory
+    ports:
+      - "8000:8000"
+    networks:
+      gl:
+        ipv4_address: 10.5.0.8

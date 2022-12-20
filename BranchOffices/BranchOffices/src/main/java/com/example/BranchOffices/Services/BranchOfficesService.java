@@ -13,9 +13,9 @@ import java.util.ArrayList;
 @Service
 public class BranchOfficesService {
     static final int budgetPort = 8000;
-    static final String serverName = "localhost";
+    static final String serverName = "10.5.0.5";
     static final String dbName = "memento_mori";
-    static final String url = "jdbc:sqlserver://" +serverName + ":178;database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
+    static final String url = "jdbc:sqlserver://" +serverName + ":1433;database="+ dbName + ";encrypt=true;trustServerCertificate=true;";
     public final String user = "SA";
     public final String password = "Abcdefg-12345";
 
@@ -107,7 +107,7 @@ public class BranchOfficesService {
         connection.close();
 
         var rest = restTemplateBuilder.build();
-        var urlBuilder = UriComponentsBuilder.fromHttpUrl("http://localhost:"+budgetPort+"/budget/income")
+        var urlBuilder = UriComponentsBuilder.fromHttpUrl("http://10.5.0.8:"+budgetPort+"/budget/income")
                 .queryParam("moneyAmount", budget)
                 .queryParam("description", description)
                 .queryParam("BranchOfficeId",id);
