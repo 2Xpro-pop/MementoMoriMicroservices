@@ -9,8 +9,44 @@
           "Port": 1939
         }
       ],
-      "UpstreamPathTemplate": "/auth/login/{login}/{password}",
+      "UpstreamPathTemplate": "/auth/create-user",
       "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/auth/create-user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.6",
+          "Port": 1939
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/create-user",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/auth/token/{request}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.6",
+          "Port": 1939
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/token/{request}",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/auth/refresh/{request}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.5.0.6",
+          "Port": 1939
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/refresh/{request}",
+      "UpstreamHttpMethod": [ "Post" ]
     },
 
 

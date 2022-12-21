@@ -1,4 +1,4 @@
-package com.example.InventoryServiceSecond;
+package com.example.Personal;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
